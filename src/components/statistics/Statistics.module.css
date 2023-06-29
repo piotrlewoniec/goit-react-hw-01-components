@@ -1,0 +1,66 @@
+:root {
+  --cardwidth: 350px;
+  --itemsize: 70px;
+  --itemlinecount: calc(var(--cardwidth) / var(--itemsize));
+}
+
+.statistics {
+  width: var(--cardwidth);
+  font-size: 16px;
+  box-shadow: 4px 7px 11px -2px rgba(66, 68, 90, 1);
+  border-radius: 0 0 8px 8px;
+  /* border: 1px solid red; */
+}
+.title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stat_list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  flex-basis: var(--itemsize);
+  /* calc((100% - number_of_gaps_in_row * value_of_one_gap) / number_of_elements_in_row) */
+  /* border: 1px solid rgb(221, 221, 221); */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.docx {
+  composes: item;
+  background-color: cyan;
+}
+
+.pdf {
+  composes: item;
+  background-color: violet;
+}
+
+.mp3 {
+  composes: item;
+  background-color: red;
+}
+
+.psd {
+  composes: item;
+  background-color: lightskyblue;
+}
+
+.label {
+  display: block;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.percentage {
+  font-size: 20px;
+  color: white;
+}
